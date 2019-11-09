@@ -7,13 +7,12 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/13.0.1">
+<VBox fx:controller="sample.Controller"
+      prefHeight="400.0" prefWidth="640.0"
+      xmlns="http://javafx.com/javafx/13.0.1"
+      xmlns:fx="http://javafx.com/fxml">
     <children>
-        <AnchorPane maxHeight="-1.0"
-                    maxWidth="-1.0"
-                    prefHeight="-1.0"
-                    prefWidth="-1.0"
-                    VBox.vgrow="ALWAYS">
+        <AnchorPane VBox.vgrow="ALWAYS">
             <children>
                 <Label alignment="CENTER"
                        contentDisplay="CENTER"
@@ -29,8 +28,18 @@
                 </Label>
                 <ButtonBar layoutX="426.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0">
                     <buttons>
-                        <Button defaultButton="true" mnemonicParsing="false" prefWidth="90.0" text="Continue" textAlignment="CENTER" />
-                        <Button cancelButton="true" mnemonicParsing="false" text="Quit" />
+                        <Button fx:id="ringButton"
+                                onAction="#ringBell"
+                                defaultButton="true"
+                                mnemonicParsing="false"
+                                prefWidth="90.0"
+                                text="Continue"
+                                textAlignment="CENTER" />
+                        <Button fx:id="quitButton"
+                                onAction="#quitProgram"
+                                cancelButton="true"
+                                mnemonicParsing="false"
+                                text="Quit" />
                     </buttons>
                 </ButtonBar>
             </children>

@@ -7,6 +7,20 @@
     <groupId>porterProject</groupId>
     <artifactId>Porter-Final-Project</artifactId>
     <version>1.0-SNAPSHOT</version>
+    
+    <dependencies>
+  <dependency>
+  	<groupId>com.google.cloud</groupId>
+  	<artifactId>google-cloud-speech</artifactId>
+  	<version>1.13.0</version>
+	</dependency>
+  <dependency>
+  	<groupId>com.google.cloud</groupId>
+  	<artifactId>google-cloud-bigquery</artifactId>
+  	<version>1.99.0</version>
+  </dependency>
+  </dependencies>
+</project>
 
     
 </project>

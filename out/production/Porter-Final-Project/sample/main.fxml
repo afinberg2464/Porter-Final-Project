@@ -7,42 +7,39 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="sample.Controller"
+<VBox fx:id="mainWindow"
+      fx:controller="sample.Controller"
       prefHeight="400.0" prefWidth="640.0"
       xmlns="http://javafx.com/javafx/13.0.1"
       xmlns:fx="http://javafx.com/fxml">
-    <children>
-        <AnchorPane VBox.vgrow="ALWAYS">
-            <children>
-                <Label alignment="CENTER"
-                       contentDisplay="CENTER"
-                       layoutX="100.0"
-                       layoutY="145.0"
-                       style="&#10;"
-                       text="Welcome to Porter!"
-                       textAlignment="CENTER"
-                       textFill="#3ca2b2" wrapText="false">
-                    <font>
-                        <Font name="Arial Bold" size="48.0" />
-                    </font>
-                </Label>
-                <ButtonBar layoutX="426.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0">
-                    <buttons>
-                        <Button fx:id="ringButton"
-                                onAction="#ringBell"
-                                defaultButton="true"
-                                mnemonicParsing="false"
-                                prefWidth="90.0"
-                                text="Continue"
-                                textAlignment="CENTER" />
-                        <Button fx:id="quitButton"
-                                onAction="#quitProgram"
-                                cancelButton="true"
-                                mnemonicParsing="false"
-                                text="Quit" />
-                    </buttons>
-                </ButtonBar>
-            </children>
-        </AnchorPane>
-    </children>
+    <AnchorPane VBox.vgrow="ALWAYS">
+        <Label alignment="CENTER"
+               contentDisplay="CENTER"
+               layoutX="100.0"
+               layoutY="145.0"
+               style="&#10;"
+               text="Welcome to Porter!"
+               textAlignment="CENTER"
+               textFill="#3ca2b2">
+            <font>
+                <Font name="Arial Bold" size="48.0"/>
+            </font>
+        </Label>
+        <ButtonBar layoutX="426.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0">
+            <buttons>
+                <Button fx:id="ringButton"
+                        onAction="#handleButtonAction"
+                        defaultButton="true"
+                        mnemonicParsing="false"
+                        prefWidth="90.0"
+                        text="Continue"
+                        textAlignment="CENTER"/>
+                <Button fx:id="quitButton"
+                        onAction="#handleButtonAction"
+                        cancelButton="true"
+                        mnemonicParsing="false"
+                        text="Quit"/>
+            </buttons>
+        </ButtonBar>
+    </AnchorPane>
 </VBox>

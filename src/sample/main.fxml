@@ -7,7 +7,8 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="sample.Controller"
+<VBox fx:id="mainWindow"
+      fx:controller="sample.Controller"
       prefHeight="400.0" prefWidth="640.0"
       xmlns="http://javafx.com/javafx/13.0.1"
       xmlns:fx="http://javafx.com/fxml">
@@ -27,14 +28,14 @@
         <ButtonBar layoutX="426.0" layoutY="346.0" prefHeight="40.0" prefWidth="200.0">
             <buttons>
                 <Button fx:id="ringButton"
-                        onAction="#ringBell"
+                        onAction="#handleButtonAction"
                         defaultButton="true"
                         mnemonicParsing="false"
                         prefWidth="90.0"
                         text="Continue"
                         textAlignment="CENTER"/>
                 <Button fx:id="quitButton"
-                        onAction="#quitProgram"
+                        onAction="#handleButtonAction"
                         cancelButton="true"
                         mnemonicParsing="false"
                         text="Quit"/>
